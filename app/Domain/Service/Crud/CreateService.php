@@ -2,19 +2,21 @@
 
 
 namespace App\Domain\Service\Crud;
-use App\Interface\CreateInterface;
 
 use App\Domain\Service\Crud\IndexService;
-use App\Domain\Repository\CreateProduct;
+use App\Domain\Repository\CreateProdutcRepo;
 use Exception;
-class CreateService implements CreateInterface{
+class CreateService {
 
     protected $product;
 
     public function Create ($product){
         try{
-            CreateProduct::CreateProduct($product);
             
+            $class = New CreateProdutcRepo($product);
+            $class->Create($product);
+
+
             if (isset($product['img']) ){
                 $image = $product->file('img');
                 $imageName = time().'.'.$image->getClientOriginalExtension();

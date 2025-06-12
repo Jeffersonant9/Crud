@@ -1,12 +1,12 @@
 <?php 
-namespace App\Domain\Infra;
+namespace App\Domain\Repository;
 
 use App\Domain\Service\Crud\IndexService;
 use App\Domain\Service\Crud\CreateService;
 use App\Domain\Service\Crud\UpdateService;
 use App\Domain\Service\Crud\DeleteService;
 
-class ContructCrud{
+class ContructCrudRepo{
     protected IndexService $indexService;
     protected CreateService $createService;
     protected UpdateService $updateService;

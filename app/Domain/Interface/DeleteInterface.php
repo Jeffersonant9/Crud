@@ -1,5 +1,5 @@
 <?php
-namespace App\Interface;
+namespace App\Domain\Interface;
 
 interface DeleteInterface{
   
